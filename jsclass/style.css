@@ -1,3 +1,4 @@
-h1 {
-	color: red;
+.menuLink {
+  color:blue;
+  text-decoration:underline;
 }
