@@ -18,6 +18,15 @@
 <!-- This is the title -->
 	<h1><span class="red">DON'T</span> let calories win!!!</h1>
 
+<!-- This is my button -->
+
+	<div id="buttongroup">
+		<button class="button" onclick="reloadPage()">Try more?</button>
+        <button class="button" onclick="window.location.href='/www.google.com'">Learn more?</button>	
+	</div>
+
+	<div id="clear"></div>
+
 <!-- This is the first sentence -->
 	<p>If you are going to <span class="activity">attend a wedding</span>,</p>
     <p>you should <span class="shadow">NOT</span> eat either</p>
@@ -76,6 +85,10 @@
 
 		function choice(arr){
 			return arr[Math.floor(Math.random() * arr.length)]
+        }
+
+        function reloadPage() {
+        	location.reload();
         }
 
         // var grammarObj ={
