@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: green /*rgb(254, 242, 230)*/;
+	background-color: rgb(254, 242, 230);
 	font-family: 'Cabin Sketch', cursive;
 }
 
@@ -47,3 +47,35 @@ p {
 h1 span {
 	color: rgb(255, 38, 38);
 }
+
+.box p {
+	margin-top: 120px;
+}
+
+.activity {
+	/*text-decoration: underline;*/
+	text-shadow: 3px 2px red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
