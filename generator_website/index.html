@@ -4,21 +4,65 @@
 	<meta charset="utf-8">
 	<title>Generator Website!!!</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 </head>
 <body>
-	<h1>How much do you know about calories?</h1>
-	<div id="img">
-		<img id="headerImg" src="pics/sweet1.png" width="400px">
-	</div>
+	<h1><span>DON'T</span> let calories win!!!</h1>
+
+	<p>If you are going to <span class="activity">attend a wedding</span>,</p>
+    <p>you should NOT eat either</p>
+
+    <div id="box">
+    	<div class="box">
+		    <img id="sweetImg" src="pics/sweet1.png" width="300px">
+	    </div>
+	    <div class="box"><p>or</p></div>
+	    <div class="box">
+		    <img id="fastfoodImg" src="pics/fastfood1.png" width="300px">
+	    </div>
+	    <div class="box"><p>but</p></div>
+	    <div>
+	        <img id="vegeImg" src="pics/vege1.png" width="300px">
+	    </div>
+    </div>
+
+    <!-- <div id="clear"></div> -->
+
+	<p id="sentence">Otherwise, you need to run for 40 minutes to burn your calories.</p>
+	
 	<script src="jquery-3.2.1.js"></script>
 	<script src="tracery.js"></script>
 	<script>
-		var foodImages = ['pics/sweet1.png', 'pics/sweet2.png', 'pics/sweet3.png', 'pics/sweet4.png', 'pics/sweet5.png', 'pics/sweet6.png', 'pics/sweet7.png', 'pics/sweet8.png', 'pics/sweet9.png']
-		var foodImg = choice(foodImages)
-		$('#headerImg').attr('src', foodImg)
+		var sweetImages = ['pics/sweet1.png', 'pics/sweet2.png', 'pics/sweet3.png', 'pics/sweet4.png', 'pics/sweet5.png', 'pics/sweet6.png', 'pics/sweet7.png', 'pics/sweet8.png', 'pics/sweet9.png']
+		var sweetImg = choice(sweetImages)
+		$('#sweetImg').attr('src', sweetImg)
+
+		var fastfoodImages = ['pics/fastfood1.png', 'pics/fastfood2.png', 'pics/fastfood3.png', 'pics/fastfood4.png', 'pics/fastfood5.png', 'pics/fastfood6.png', 'pics/fastfood7.png', 'pics/fastfood8.png', 'pics/fastfood9.png']
+		var fastfoodImg = choice(fastfoodImages)
+		$('#fastfoodImg').attr('src', fastfoodImg)
+
+		var vegeImages = ['pics/vege1.png', 'pics/vege2.png', 'pics/vege3.png', 'pics/vege4.png', 'pics/vege5.png', 'pics/vege6.png', 'pics/vege7.png', 'pics/vege8.png', 'pics/vege9.png']
+		var vegeImg = choice(vegeImages)
+		$('#vegeImg').attr('src', vegeImg)
+
+		var activityNames = ["see your ex-boyfriend", "play beach volleyball", "fit into your old jeans"]
+        var activity = choice(activityNames)
+        $(".activity").text(activity)
+
 		function choice(arr){
 			return arr[Math.floor(Math.random() * arr.length)]
         }
+
+        // var grammarObj ={
+        // 	"S": [Otherwise, you need to #Sports# for #Time# minutes to burn your calories.],
+        // 	"Sports": ["jog", "swim", "hike", "scuba dive", "horseback ride", "weightlift"],
+        // 	"Time": ["40", "20", "30", "50", "10", "60"]
+        // }
+        // var grammar = tracery.createGrammar(grammarObj)
+        // function generate() {
+        // 	var t = grammar.flatten("#S#");
+        // 	$("#sentence").text(t);
+        // }
 	</script>
 
 </body>

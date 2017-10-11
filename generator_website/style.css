@@ -1,11 +1,49 @@
+#clear {
+	clear: both;
+}
+
 body {
-	background-color: rgb(254, 242, 230);
+	background-color: green /*rgb(254, 242, 230)*/;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 h1 {
 	text-align: center;
+	font-size: 110px;
+
+	animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
-/*#image {
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.box {
+	float: left;
+	/*margin-left: 50px;
+	margin-right: 50px;*/
+}
+
+p {
+	font-size: 50px;
 	text-align: center;
-}*/
+	padding: 0;
+}
+
+#box {
+	margin-left: 15vw;
+}
+
+h1 span {
+	color: rgb(255, 38, 38);
+}
