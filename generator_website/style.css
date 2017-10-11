@@ -44,8 +44,8 @@ p {
 	margin-left: 15vw;
 }
 
-h1 span {
-	color: rgb(255, 38, 38);
+.red {
+	color: rgb(255, 60, 30);
 }
 
 .box p {
@@ -57,19 +57,31 @@ h1 span {
 	text-shadow: 3px 2px red;
 }
 
+#footer p {
+    margin-top: 5vw;
+    padding: 10px;
+    background-color: rgb(68, 68, 68);
+    text-align: center;
+    color: rgb(229, 229, 229);
+    font-size: 20px;
+    word-spacing: 5px;
+}
 
+.shadow {
+	text-shadow: 3px 2px red;
+}
 
+.sports {
+	font-style: italic;
+	text-shadow: 3px 2px red;
+	font-size: 60px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.time {
+	font-style: italic;
+	text-shadow: 3px 2px red;
+	font-size: 60px;
+}
 
 
 
