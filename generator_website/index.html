@@ -16,7 +16,7 @@
 <body>
 
 <!-- This is the title -->
-	<h1><span class="red">DON'T</span> let calories win!!!</h1>
+	<h1><span class="red">DON'T</span> let <span class="color">calories</span> win!!!</h1>
 
 <!-- This is my button -->
 	<div id="buttongroup">
@@ -58,15 +58,16 @@
 	<script src="jquery-3.2.1.js"></script>
 	<script src="tracery.js"></script>
 	<script>
-		var sweetImages = ['pics/sweet1.png', 'pics/sweet2.png', 'pics/sweet3.png', 'pics/sweet4.png', 'pics/sweet5.png', 'pics/sweet6.png', 'pics/sweet7.png', 'pics/sweet8.png', 'pics/sweet9.png']
+		// reload images randomly
+		var sweetImages = ["pics/sweet1.png", "pics/sweet2.png", "pics/sweet3.png", "pics/sweet4.png", "pics/sweet5.png", "pics/sweet6.png", "pics/sweet7.png", "pics/sweet8.png", "pics/sweet9.png"]
 		var sweetImg = choice(sweetImages)
 		$('#sweetImg').attr('src', sweetImg)
 
-		var fastfoodImages = ['pics/fastfood1.png', 'pics/fastfood2.png', 'pics/fastfood3.png', 'pics/fastfood4.png', 'pics/fastfood5.png', 'pics/fastfood6.png', 'pics/fastfood7.png', 'pics/fastfood8.png', 'pics/fastfood9.png']
+		var fastfoodImages = ["pics/fastfood1.png", "pics/fastfood2.png", "pics/fastfood3.png", "pics/fastfood4.png", "pics/fastfood5.png", "pics/fastfood6.png", "pics/fastfood7.png", "pics/fastfood8.png", "pics/fastfood9.png"]
 		var fastfoodImg = choice(fastfoodImages)
 		$('#fastfoodImg').attr('src', fastfoodImg)
 
-		var vegeImages = ['pics/vege1.png', 'pics/vege2.png', 'pics/vege3.png', 'pics/vege4.png', 'pics/vege5.png', 'pics/vege6.png', 'pics/vege7.png', 'pics/vege8.png', 'pics/vege9.png']
+		var vegeImages = ["pics/vege1.png", "pics/vege2.png", "pics/vege3.png", "pics/vege4.png", "pics/vege5.png", "pics/vege6.png", "pics/vege7.png", "pics/vege8.png", "pics/vege9.png"]
 		var vegeImg = choice(vegeImages)
 		$('#vegeImg').attr('src', vegeImg)
 
@@ -82,24 +83,23 @@
         var time = choice(timeNames)
         $(".time").text(time)
 
+        var colorsNames = ["rgb(239, 83, 187)", "rgb(177, 83, 239)", "rgb(83, 117, 239)", "rgb(83, 211, 239)", "rgb(83, 239, 94)", "rgb(239, 229, 83)"]
+        var color = choice(colorsNames)
+        $(".color").css("color", color)
+
 		function choice(arr){
 			return arr[Math.floor(Math.random() * arr.length)]
         }
 
+        // press the button to reload the page
         function reloadPage() {
         	location.reload();
         }
 
-        // var grammarObj ={
-        // 	"S": [Otherwise, you need to #Sports# for #Time# minutes to burn your calories.],
-        // 	"Sports": ["jog", "swim", "hike", "scuba dive", "horseback ride", "weightlift"],
-        // 	"Time": ["40", "20", "30", "50", "10", "60"]
-        // }
-        // var grammar = tracery.createGrammar(grammarObj)
-        // function generate() {
-        // 	var t = grammar.flatten("#S#");
-        // 	$("#sentence").text(t);
-        // }
+        // change the color of the text when hover
+        $("h1").hover(function(){
+        	$(this).css("color", "rgb(0, 0, 0)")
+        })
 	</script>
 
 </body>
