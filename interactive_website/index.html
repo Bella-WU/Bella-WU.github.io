@@ -2,100 +2,22 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Generator Website!!!</title>
+	<title>Interactive Website!!!</title>
 
 <!-- link to my css -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 <!-- add my font -->
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+<!-- add my javascript -->
+	<script src="../p5.js"></script>
+    <script src="../p5.sound.js"></script>
+    <script src="sketch.js"></script>
 </head>
 
 
 
 <body>
-
-<!-- This is the title -->
-	<h1><span class="red">DON'T</span> let <span class="color">calories</span> win!!!</h1>
-
-<!-- This is my button -->
-	<div id="buttongroup">
-		<button class="button" onclick="reloadPage()">Try&nbsp;&nbsp;&nbsp;&nbsp; more?</button>
-        <button class="button" onclick="window.location.href='http://www.calorieking.com/'">Learn &nbsp;more?</button>	
-	</div>
-
-	<div id="clear"></div>
-
-<!-- This is the first sentence -->
-	<p>If you are going to <span class="activity">attend a wedding</span>,</p>
-    <p>you should <span class="shadow">NOT</span> eat either</p>
-
-<!-- This is the picture group -->
-    <div id="box">
-    	<div class="box">
-		    <img id="sweetImg" src="pics/sweet1.png" width="300px">
-	    </div>
-	    <div class="box"><p>or</p></div>
-	    <div class="box">
-		    <img id="fastfoodImg" src="pics/fastfood1.png" width="300px">
-	    </div>
-	    <div class="box"><p>but</p></div>
-	    <div>
-	        <img id="vegeImg" src="pics/vege1.png" width="300px">
-	    </div>
-    </div>
-
-<!-- This is the second sentence -->
-	<p id="sentence">Otherwise, you need to <span class="sports">run</span> &nbsp;for<br> <span class="time">40</span> minutes to burn your calories.</p>
-
-<!-- This is my footer -->
-	<div id="footer">
-        <p>Copyright © 2017 YAN WU<br>All Rights Reserved.</p>
-    </div>
-
-<!-- This is my javascript -->
-<!-- add libraries -->
-	<script src="jquery-3.2.1.js"></script>
-	<script src="tracery.js"></script>
-	<script>
-		// reload images randomly
-		var sweetImages = ["pics/sweet1.png", "pics/sweet2.png", "pics/sweet3.png", "pics/sweet4.png", "pics/sweet5.png", "pics/sweet6.png", "pics/sweet7.png", "pics/sweet8.png", "pics/sweet9.png"]
-		var sweetImg = choice(sweetImages)
-		$('#sweetImg').attr('src', sweetImg)
-
-		var fastfoodImages = ["pics/fastfood1.png", "pics/fastfood2.png", "pics/fastfood3.png", "pics/fastfood4.png", "pics/fastfood5.png", "pics/fastfood6.png", "pics/fastfood7.png", "pics/fastfood8.png", "pics/fastfood9.png"]
-		var fastfoodImg = choice(fastfoodImages)
-		$('#fastfoodImg').attr('src', fastfoodImg)
-
-		var vegeImages = ["pics/vege1.png", "pics/vege2.png", "pics/vege3.png", "pics/vege4.png", "pics/vege5.png", "pics/vege6.png", "pics/vege7.png", "pics/vege8.png", "pics/vege9.png"]
-		var vegeImg = choice(vegeImages)
-		$('#vegeImg').attr('src', vegeImg)
-
-		var activityNames = ["make your ex-boyfriend regret", "wear a bikini", "fit into your old jeans", "wear more high heels", "increase your chance of suivival"]
-        var activity = choice(activityNames)
-        $(".activity").text(activity)
-
-        var sportsNames = ["jog", "swim", "hike", "dive", "horseback ride", "weightlife"]
-        var sports = choice(sportsNames)
-        $(".sports").text(sports)
-
-        var timeNames = ["10", "20", "30", "40", "50", "60"]
-        var time = choice(timeNames)
-        $(".time").text(time)
-
-        var colorsNames = ["rgb(239, 83, 187)", "rgb(177, 83, 239)", "rgb(83, 117, 239)", "rgb(83, 211, 239)", "rgb(83, 239, 94)", "rgb(239, 229, 83)"]
-        var color = choice(colorsNames)
-        $(".color").css("color", color)
-
-		function choice(arr){
-			return arr[Math.floor(Math.random() * arr.length)]
-        }
-
-        // press the button to reload the page
-        function reloadPage() {
-        	location.reload();
-        }
-	</script>
-
 </body>
 </html>
