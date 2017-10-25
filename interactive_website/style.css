@@ -43,6 +43,7 @@ h1 {
 #question {
   text-align: center;
   font-size: 80px;
+  color: rgb(68,68,68);
 
   animation-name: swing;
   animation-duration: 1s;
@@ -68,6 +69,30 @@ h1 {
 
   to {
     transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+#conclusion {
+  text-align: center;
+  font-size: 80px;
+  color: rgb(68,68,68);
+
+  animation-name: zoomInUp;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
   }
 }
 
@@ -153,6 +178,15 @@ h1 {
   margin-top: 8vh;
   text-align: center;
   /*padding: 20px;*/
+}
+
+#finish {
+  text-align: center;
+  display:none;
+}
+
+iframe {
+  margin-left: 32.5vw;
 }
 
 #footer p {
