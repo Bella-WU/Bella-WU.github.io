@@ -1,60 +1,91 @@
 #clear {
-	clear: both;
+  clear: both;
 }
 
 body {
-	background-color: rgb(254, 242, 230);
-	font-family: 'Cabin Sketch', cursive;
+  background-color: rgb(255, 161, 1);
+  font-family: 'Cabin Sketch', cursive;
+}
+
+#title {
+  /*background-color: rgb(255,0,0);*/
 }
 
 h1 {
-	text-align: center;
-	font-size: 110px;
-
-	animation-name: fadeInDown;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+  text-align: center;
+  font-size: 80px;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
+#picture {
+  text-align: center;
+  /*background-color: rgb(0,255,0);*/
+  z-index: -1;
+}
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
+#group {
+  z-index: 99;
+}
+
+#button {
+  text-align: center;
+  padding: 20px;
+  /*background-color: rgb(0,0,255);*/
+}
+
+.button {
+  display: inline-block;
+  /*float: left;*/
+  padding: 15px 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .box {
-	float: left;
-	/*margin-left: 50px;
-	margin-right: 50px;*/
+  /*width:80px;
+  height:80px;*/
+  float: left;
+  display:none;
 }
 
-p {
-	font-size: 50px;
-	text-align: center;
-	padding: 0;
+#box1 {
+  /*background-color:red;*/
+  margin-left: 10vw;
 }
 
-#box {
-	margin-left: 15vw;
+#box2 {
+  /*background-color:green;*/
+  margin-left: 6vw;
 }
 
-.red {
-	color: rgb(255, 60, 30);
+#box3 {
+  /*background-color:blue;*/
+  float: right;
+  margin-right: 10vw;
 }
 
-.box p {
-	margin-top: 120px;
-}
-
-.activity {
-	/*text-decoration: underline;*/
-	text-shadow: 3px 2px red;
+#box4 {
+  /*background-color:yellow;*/
+  float: right;
+  margin-right: 8vw;
 }
 
 #footer p {
@@ -67,52 +98,10 @@ p {
     word-spacing: 5px;
 }
 
-.shadow {
-	text-shadow: 3px 2px red;
-}
 
-.sports {
-	font-style: italic;
-	text-shadow: 3px 2px red;
-	font-size: 60px;
-}
 
-.time {
-	font-style: italic;
-	text-shadow: 3px 2px red;
-	font-size: 60px;
-}
 
-/*My button*/
-.button {
-  display: inline-block;
-  float: left;
-  padding: 15px 50px;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  margin-left: 100px;
-  font-family: 'Cabin Sketch', cursive;
-}
 
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-#buttongroup {
-	margin-left: 300px;
-}
 
 
 

@@ -7,22 +7,26 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(720, 200);
-  background(255,0,0);
+  // createCanvas(720, 200);
+  // background(255,0,0);
 }
 
-function mousePressed() {
-  if ( beat.isPlaying() ) { // .isPlaying() returns a boolean
-    beat.stop();
-    background(255,0,0);
-  } else {
-    beat.play();
-    background(0,255,0);
-  }
+// function mousePressed() {
+//   if ( beat.isPlaying() ) { // .isPlaying() returns a boolean
+//     beat.stop();
+//     background(255,0,0);
+//   } else {
+//     beat.play();
+//     background(0,255,0);
+//   }
+// }
+
+function draw() {
+	ellipse(50, 50, 80, 80);
 }
 
 function keyTyped() {
-	if(key == " ") {
+	if(key == "A") {
 		airhorn.play();
 	}
 }
