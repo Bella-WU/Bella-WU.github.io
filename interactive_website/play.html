@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Interactive Website!!!</title>
+
+<!-- link to my css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- add my font -->
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+<!-- add my javascript -->
+	<!-- <script src="jquery-3.2.1.js"></script> -->
+	<!-- <script src="p5.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="sketch.js"></script> -->
+</head>
+<body>
+	<h1 id="question">press <span class="color">"Change!"</span> to choose your food</h1>
+	<div id="group">
+		<div id="box1" class="box">
+			<button id="fruit" class="button">Fruit</button>
+			<div><img id="fruitsImg" src="fruits/apple.png" width="200px"></div>
+		</div>
+
+	    <div id="box2" class="box">
+	    	<button id="vegetable" class="button">Vegetable</button>
+	    	<div><img id="vegetablesImg" src="vegetables/eggplant.png" width="200px"></div>
+	    </div>
+
+	    <div id="box3" class="box">
+	    	<button id="meat" class="button">Fat</button>
+	    	<div><img id="meatsImg" src="meats/beef.png" width="200px"></div>
+	    </div>
+
+	    <div id="box4" class="box">
+	    	<button id="sweet" class="button">Sweets</button>
+	    	<div><img id="sweetsImg" src="sweets/cake.png" width="200px"></div>
+	    </div>
+
+        <!-- <div id="change">
+        <button class="button">Start!</button>
+        </div> -->
+	</div>
+
+    <div id="change">
+        <button class="button" onclick="reloadPage()">Change!</button>
+    </div>
+
+    <div id="start">
+        <button class="button" onclick="start()">&nbsp;&nbsp;Start!&nbsp;&nbsp;</button>
+    </div>
+
+	<div id="clear"></div>
+
+	<div id="picture">
+		<img src="pics/body-back.png" width="1200px">
+	</div>
+
+	<div id="footer">
+        <p>Copyright © 2017 YAN WU<br>All Rights Reserved.</p>
+    </div>
+
+	<audio id="a" src="../assets/a.wav"></audio>
+	<audio id="b" src="../assets/b.wav"></audio>
+	<audio id="c" src="../assets/c.wav"></audio>
+	<audio id="d" src="../assets/d.wav"></audio>
+	<audio id="e" src="../assets/e.wav"></audio>
+	<audio id="f" src="../assets/f.wav"></audio>
+	<audio id="g" src="../assets/g.wav"></audio>
+	<audio id="h" src="../assets/h.wav"></audio>
+	<audio id="i" src="../assets/i.wav"></audio>
+	<audio id="j" src="../assets/j.wav"></audio>
+	<audio id="k" src="../assets/k.wav"></audio>
+	<audio id="l" src="../assets/l.wav"></audio>
+	<audio id="m" src="../assets/m.wav"></audio>
+	<audio id="n" src="../assets/n.wav"></audio>
+	<audio id="o" src="../assets/o.wav"></audio>
+	<audio id="p" src="../assets/p.wav"></audio>
+	<audio id="q" src="../assets/q.wav"></audio>
+	<audio id="r" src="../assets/r.wav"></audio>
+	<audio id="s" src="../assets/s.wav"></audio>
+	<audio id="t" src="../assets/t.wav"></audio>
+	<audio id="u" src="../assets/u.wav"></audio>
+	<audio id="v" src="../assets/v.wav"></audio>
+	<audio id="w" src="../assets/w.wav"></audio>
+	<audio id="x" src="../assets/x.wav"></audio>
+	<audio id="y" src="../assets/y.wav"></audio>
+	<audio id="z" src="../assets/z.wav"></audio>
+	<audio id="game" src="../assets/start.ogg"></audio>
+	<audio id="voice" src="../assets/voice.wav"></audio>
+
+
+	<script src="jquery-3.2.1.js"></script>
+	<script src="tracery.js"></script>
+	<script>
+		var fruitsImages = ["fruits/banana.png", "fruits/blueberry.png", "fruits/cherry.png", "fruits/grape.png", "fruits/orange.png", "fruits/pineapple.png", "fruits/strawberry.png", "fruits/watermelon.png"];
+        var fruitImg = choice(fruitsImages);
+        $('#fruitsImg').attr('src', fruitImg);
+
+        var vegetablesImages = ["vegetables/broccoli.png", "vegetables/garlic.png", "vegetables/maize.png", "vegetables/onion.png", "vegetables/pepper.png", "vegetables/potato.png", "vegetables/radish.png", "vegetables/spanich.png"];
+        var vegetableImg = choice(vegetablesImages);
+        $('#vegetablesImg').attr('src', vegetableImg);
+
+        var meatsImages = ["meats/cheese.png", "meats/chicken.png", "meats/cod.png", "meats/egg.png", "meats/hotdog.png", "meats/pizza.png", "meats/salmon.png", "meats/shrimp.png"];
+        var meatImg = choice(meatsImages);
+        $('#meatsImg').attr('src', meatImg);
+
+        var sweetsImages = ["sweets/candy.png", "sweets/chocolate.png", "sweets/cupcake.png", "sweets/donut.png", "sweets/icecream.png", "sweets/lollipop.png", "sweets/sugar.png", "sweets/pudding.png"];
+        var sweetImg = choice(sweetsImages);
+        $('#sweetsImg').attr('src', sweetImg);
+
+        function choice(arr){
+        	return arr[Math.floor(Math.random() * arr.length)]
+        }
+
+        function change() {
+        	$('#fruitsImg').attr('src', fruitImg);
+        }
+
+        function reloadPage() {
+        	location.reload();
+        }
+
+        function start() {
+        	$("#picture").fadeIn("slow");
+        	document.getElementById('game').play();
+        	document.getElementById('voice').play()
+        	$("#change").hide();
+        	$("#question").hide();
+        }
+		
+
+
+
+        $(document).keydown(function(a){
+        	if (a.keyCode == 65) {
+        		document.getElementById('a').play()
+        	}
+        });
+
+        $(document).keydown(function(b){
+        	if (b.keyCode == 66) {
+        		document.getElementById('b').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(c){
+        	if (c.keyCode == 67) {
+        		document.getElementById('c').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(d){
+        	if (d.keyCode == 68) {
+        		document.getElementById('d').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(e){
+        	if (e.keyCode == 69) {
+        		document.getElementById('e').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(f){
+        	if (f.keyCode == 70) {
+        		document.getElementById('f').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(g){
+        	if (g.keyCode == 71) {
+        		document.getElementById('g').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(h){
+        	if (h.keyCode == 72) {
+        		document.getElementById('h').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(i){
+        	if (i.keyCode == 73) {
+        		document.getElementById('i').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(j){
+        	if (j.keyCode == 74) {
+        		document.getElementById('j').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(k){
+        	if (k.keyCode == 75) {
+        		document.getElementById('k').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(l){
+        	if (l.keyCode == 76) {
+        		document.getElementById('l').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(m){
+        	if (m.keyCode == 77) {
+        		document.getElementById('m').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(n){
+        	if (n.keyCode == 78) {
+        		document.getElementById('n').play()
+        	}
+        });
+
+        $(document).keydown(function(o){
+        	if (o.keyCode == 79) {
+        		document.getElementById('o').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(p){
+        	if (p.keyCode == 80) {
+        		document.getElementById('p').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(q){
+        	if (q.keyCode == 81) {
+        		document.getElementById('q').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(r){
+        	if (r.keyCode == 82) {
+        		document.getElementById('r').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(s){
+        	if (s.keyCode == 83) {
+        		document.getElementById('s').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(t){
+        	if (t.keyCode == 84) {
+        		document.getElementById('t').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(u){
+        	if (u.keyCode == 85) {
+        		document.getElementById('u').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(v){
+        	if (v.keyCode == 86) {
+        		document.getElementById('v').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(w){
+        	if (w.keyCode == 87) {
+        		document.getElementById('w').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(x){
+        	if (x.keyCode == 88) {
+        		document.getElementById('x').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(y){
+        	if (y.keyCode == 89) {
+        		document.getElementById('y').play()
+        		// return false;
+        	}
+        });
+
+        $(document).keydown(function(z){
+        	if (z.keyCode == 90) {
+        		document.getElementById('z').play()
+        		// return false;
+        	}
+        });
+	</script>
+</body>
+</html>
