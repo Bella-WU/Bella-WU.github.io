@@ -86,7 +86,7 @@
 
 
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function() {
 			$("#button").click(function(){
 				// $("#title").hide();
 				$("#box1").fadeIn("slow");
@@ -98,6 +98,7 @@
             $("#fruit").click(function(){
 				$('#fruitsImg').attr('src', fruitImg);
             });
+
 
             $("#vegetable").click(function(){
 				$('#vegetablesImg').attr('src', vegetableImg);
@@ -111,8 +112,20 @@
 				$('#sweetsImg').attr('src', sweetImg);
             });
 
+            var fruitsImages = ["fruits/banana.png", "fruits/blueberry.png", "fruits/cherry.png", "fruits/grape.png", "fruits/orange.png", "fruits/pineapple.png", "fruits/strawberry.png", "fruits/watermelon.png"];
+            var fruitImg = choice(fruitsImages);
+
+            var vegetablesImages = ["vegetables/broccoli.png", "vegetables/garlic.png", "vegetables/maize.png", "vegetables/onion.png", "vegetables/pepper.png", "vegetables/potato.png", "vegetables/radish.png", "vegetables/spanich.png"];
+            var vegetableImg = choice(vegetablesImages);
+
+            var meatsImages = ["meats/cheese.png", "meats/chicken.png", "meats/cod.png", "meats/egg.png", "meats/hotdog.png", "meats/pizza.png", "meats/salmon.png", "meats/shrimp.png"];
+            var meatImg = choice(meatsImages);
+
+            var sweetsImages = ["sweets/candy.png", "sweets/chocolate.png", "sweets/cupcake.png", "sweets/donut.png", "sweets/icecream.png", "sweets/lollipop.png", "sweets/sugar.png", "sweets/pudding.png"];
+            var sweetImg = choice(sweetsImages);
+
             function choice(arr){
-			return arr[Math.floor(Math.random() * arr.length)]
+                return arr[Math.floor(Math.random() * arr.length)]
             }
         });
 
@@ -301,21 +314,21 @@
 
 
 
-        var fruitsImages = ["fruits/banana.png", "fruits/blueberry.png", "fruits/cherry.png", "fruits/grape.png", "fruits/orange.png", "fruits/pineapple.png", "fruits/strawberry.png", "fruits/watermelon.png"];
-		var fruitImg = choice(fruitsImages);
+  //       var fruitsImages = ["fruits/banana.png", "fruits/blueberry.png", "fruits/cherry.png", "fruits/grape.png", "fruits/orange.png", "fruits/pineapple.png", "fruits/strawberry.png", "fruits/watermelon.png"];
+		// var fruitImg = choice(fruitsImages);
 
-		var vegetablesImages = ["vegetables/broccoli.png", "vegetables/garlic.png", "vegetables/maize.png", "vegetables/onion.png", "vegetables/pepper.png", "vegetables/potato.png", "vegetables/radish.png", "vegetables/spanich.png"];
-		var vegetableImg = choice(vegetablesImages);
+		// var vegetablesImages = ["vegetables/broccoli.png", "vegetables/garlic.png", "vegetables/maize.png", "vegetables/onion.png", "vegetables/pepper.png", "vegetables/potato.png", "vegetables/radish.png", "vegetables/spanich.png"];
+		// var vegetableImg = choice(vegetablesImages);
 
-		var meatsImages = ["meats/cheese.png", "meats/chicken.png", "meats/cod.png", "meats/egg.png", "meats/hotdog.png", "meats/pizza.png", "meats/salmon.png", "meats/shrimp.png"];
-		var meatImg = choice(meatsImages);
+		// var meatsImages = ["meats/cheese.png", "meats/chicken.png", "meats/cod.png", "meats/egg.png", "meats/hotdog.png", "meats/pizza.png", "meats/salmon.png", "meats/shrimp.png"];
+		// var meatImg = choice(meatsImages);
 
-		var sweetsImages = ["sweets/candy.png", "sweets/chocolate.png", "sweets/cupcake.png", "sweets/donut.png", "sweets/icecream.png", "sweets/lollipop.png", "sweets/sugar.png", "sweets/pudding.png"];
-		var sweetImg = choice(sweetsImages);
+		// var sweetsImages = ["sweets/candy.png", "sweets/chocolate.png", "sweets/cupcake.png", "sweets/donut.png", "sweets/icecream.png", "sweets/lollipop.png", "sweets/sugar.png", "sweets/pudding.png"];
+		// var sweetImg = choice(sweetsImages);
 
-		function choice(arr){
-			return arr[Math.floor(Math.random() * arr.length)]
-        }
+		// function choice(arr){
+		// 	return arr[Math.floor(Math.random() * arr.length)]
+  //       }
 	</script>
 </body>
 </html>
