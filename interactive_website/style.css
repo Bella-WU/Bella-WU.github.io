@@ -132,6 +132,25 @@ h1 {
   font-family: 'Cabin Sketch', cursive;
 }
 
+.buttonNone {
+  display: inline-block;
+  /*float: left;*/
+  padding: 15px 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  /*box-shadow: 0 9px #999;*/
+  font-family: 'Cabin Sketch', cursive;
+}
+
 .button:hover {background-color: #3e8e41}
 
 .button:active {
