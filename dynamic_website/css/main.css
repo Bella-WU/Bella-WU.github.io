@@ -1,0 +1,103 @@
+#particles-js{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(22, 22, 22);
+  z-index: -100;
+}
+
+#introduction {
+	width: 650px;
+	height: 250px;
+	margin: auto;
+	margin-top: 5vh;
+	text-align: center;
+    font-family: 'Lobster', cursive;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+span {
+	color: rgb(255, 61, 61);
+}
+
+#introduction p {
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-style: italic;
+}
+
+.sideFadeIn{
+	animation-name: sideFadeIn;
+	-webkit-animation-name: sideFadeIn;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes sideFadeIn {
+	0% {
+	
+		opacity: 0.0;		
+	}
+	50% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;	
+	}		
+}
+
+/*#change {
+	margin-top: 3vh;
+	text-align: center;
+}
+
+#capture {
+	display: none;
+	margin-top: 3vh;
+	text-align: center;
+}*/
+
+#canvas{
+	display: none;
+}
+
+#button {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.booth-capture-button{
+	display: block;
+	margin: 30px 0;
+	padding: 10px 20px;
+	background-color: cornflowerblue;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	text-decoration: none;
+	font-family: 'Lobster', cursive;
+}
+
+#video {
+	margin-left: 20vw;
+}
+
+#photo {
+	margin-left: 2vw;
+}
+
+
+
+
+
+
+
