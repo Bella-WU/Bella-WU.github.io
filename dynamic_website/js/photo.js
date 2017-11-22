@@ -54,24 +54,24 @@
         };
 
 
-		// $.ajax({
-  //           // NOTE: You must use the same location in your REST call as you used to obtain your subscription keys.
-  //           //   For example, if you obtained your subscription keys from westcentralus, replace "westus" in the 
-  //           //   URL below with "westcentralus".
-  //           url: "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize", //+ $.param(params),
-  //           beforeSend: function(xhrObj){
-  //               // Request headers
-  //               xhrObj.setRequestHeader("Content-Type","application/octet-stream"),
-  //               // NOTE: Replace the "Ocp-Apim-Subscription-Key" value with a valid subscription key.
-  //               xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","33f4cea0a887400c86603788a8fb9b94");
-  //           },
-  //           type: "POST",
-  //           processData: false,
-  //           // Request body
-  //           //data: '{"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Girl_Portrait_Kid_Cute_Hair_Sunlight_Arab_Young.jpg/220px-Girl_Portrait_Kid_Cute_Hair_Sunlight_Arab_Young.jpg"}',
-  //           data: makebolb(imgURL)
+		$.ajax({
+            // NOTE: You must use the same location in your REST call as you used to obtain your subscription keys.
+            //   For example, if you obtained your subscription keys from westcentralus, replace "westus" in the 
+            //   URL below with "westcentralus".
+            url: "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize", //+ $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/octet-stream"),
+                // NOTE: Replace the "Ocp-Apim-Subscription-Key" value with a valid subscription key.
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","33f4cea0a887400c86603788a8fb9b94");
+            },
+            type: "POST",
+            processData: false,
+            // Request body
+            //data: '{"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Girl_Portrait_Kid_Cute_Hair_Sunlight_Arab_Young.jpg/220px-Girl_Portrait_Kid_Cute_Hair_Sunlight_Arab_Young.jpg"}',
+            data: makebolb(imgURL)
 
-  //       })
+        })
         .done(function(data) {
             alert("success");
             // console.log(data[0].scores.happiness);
