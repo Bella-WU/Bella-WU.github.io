@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rule For The Game</title>
+</head>
+<body>
+	<img src="assets/rule.png" style="width: 100%">
+	<button id="button" onclick="window.location.href='game.html'" onclick="start()"></button>
+	<audio id="bottle" src="assets/bottle.mp3"></audio>
+
+
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		$(document).keydown(function(e){
+        	if (e.keyCode == 13) {
+        		document.getElementById('button').onclick();
+        	}
+        });
+
+        function start() {
+        	document.getElementById('bottle').play();
+        }
+
+		// $(document).ready(function(){
+		// 	$('#button').keypress(function(e){
+		// 		if(e.keyCode == 13) {
+		// 			$('#button').onclick();
+		// 		}
+  //   		});
+		// });
+	</script>
+</body>
+</html>
