@@ -3,7 +3,7 @@ var fontChristmas;
 var imgFrog, imgTree, imgHouse1, imgSantaBig;
 var imgKeyEnter, imgKeyUp, imgKeyDown, imgKeyLeft, imgKeyRight;
 var imgColor, imgBrown, imgGift;
-var gameMusic, moveMusic, hurtMusic;
+var gameMusic, moveMusic, hurtMusic, winMusic;
 
 // var myGif;
 var numbers = [ "1", "2", "3", "4", "5", "6" ];
@@ -31,6 +31,7 @@ function preload() {
   gameMusic = loadSound("assets/game.mp3");
   moveMusic = loadSound("assets/move.wav");
   hurtMusic = loadSound("assets/hurt.wav");
+  winMusic = loadSound("assets/win.wav");
 }
 
 
@@ -147,6 +148,9 @@ function draw() {
 
     if (frog.y <= 50) {
         gameMusic.stop();
+        winMusic.setVolume(0.5);
+        winMusic.setLoop(false);
+        winMusic.play();
         fill("rgba(0,0,0, 0.9)");
         rect(0, 0, windowWidth, 800);
 
