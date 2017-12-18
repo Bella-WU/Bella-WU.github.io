@@ -3,6 +3,8 @@ var fontChristmas;
 var imgFrog, imgTree, imgHouse1, imgSantaBig;
 var imgKeyEnter, imgKeyUp, imgKeyDown, imgKeyLeft, imgKeyRight;
 var imgColor, imgBrown, imgGift;
+var gameMusic, moveMusic, hurtMusic;
+
 // var myGif;
 var numbers = [ "1", "2", "3", "4", "5", "6" ];
 // var number = random(numbers);
@@ -25,6 +27,10 @@ function preload() {
   var number = random(numbers);
   imgGift = loadImage("assets/gift" + number + ".png");
   fontChristmas = loadFont("assets/Christmas.ttf");
+
+  gameMusic = loadSound("assets/game.mp3");
+  moveMusic = loadSound("assets/move.wav");
+  hurtMusic = loadSound("assets/hurt.wav");
 }
 
 
@@ -35,11 +41,15 @@ const lanes = [];
 const grid = 50;
 
 const resetGame = () => {
+    // hurtMusic.setVolume(0.8);
+    // hurtMusic.play();
     frog = new Frog(width / 2 - grid / 2, height - grid, grid, width);
     frog.attach(null);
 };
 
 function setup() {
+    gameMusic.setVolume(1.2);
+    gameMusic.loop();
     createCanvas(windowWidth, 800);
     // myGif = loadGif("assets/source.gif");
     resetGame();
@@ -136,7 +146,8 @@ function draw() {
     // image(imgGift, 1060, 300, 150, 150);
 
     if (frog.y <= 50) {
-        fill("rgba(0,0,0, 0.8)");
+        gameMusic.stop();
+        fill("rgba(0,0,0, 0.9)");
         rect(0, 0, windowWidth, 800);
 
         textSize(90);
@@ -145,7 +156,7 @@ function draw() {
         text("Oh, you've got a box of            !!!", 250, 400);
         textSize(50);
         text("Press 'Enter' to start again.", 500, 750);
-        
+
         textSize(90);
         fill(230, 66, 87);
         text("Wishing you a Merry Christmas!", 200, 550);
@@ -153,6 +164,8 @@ function draw() {
 
         if (keyCode === ENTER) {
             resetGame();
+            gameMusic.setVolume(1.2);
+            gameMusic.loop();
         }
     }
 }
@@ -160,11 +173,19 @@ function draw() {
 function keyPressed() {
     if (keyCode === UP_ARROW) {
         frog.move(0, -1);
+        moveMusic.setVolume(0.5);
+        moveMusic.play();
     } else if (keyCode === DOWN_ARROW) {
         frog.move(0, 1);
+        moveMusic.setVolume(0.5);
+        moveMusic.play();
     } else if (keyCode === RIGHT_ARROW) {
         frog.move(1, 0);
+        moveMusic.setVolume(0.5);
+        moveMusic.play();
     } else if (keyCode === LEFT_ARROW) {
         frog.move(-1, 0);
+        moveMusic.setVolume(0.5);
+        moveMusic.play();
     }
 }

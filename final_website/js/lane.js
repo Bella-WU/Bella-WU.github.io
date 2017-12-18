@@ -24,6 +24,8 @@ class Lane extends Rectangle {
             this.obstacles.forEach(function (car) {
                 if (frog.intersects(car)) {
                     resetGame();
+                    hurtMusic.setVolume(0.8);
+                    hurtMusic.play();
                 }
             });
         } else {

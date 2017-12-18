@@ -7,6 +7,8 @@ class Rectangle {
     }
 
     intersects(other) {
+        // hurtMusic.setVolume(0.8);
+        // hurtMusic.play();
         const left = this.x;
         const right = this.x + this.width;
         const top = this.y;
