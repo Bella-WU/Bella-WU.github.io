@@ -148,9 +148,9 @@ function draw() {
 
     if (frog.y <= 50) {
         gameMusic.stop();
-        winMusic.setVolume(0.5);
-        winMusic.setLoop(false);
-        winMusic.play();
+        // winMusic.setVolume(0.5);
+        // winMusic.setLoop(false);
+        // winMusic.play();
         fill("rgba(0,0,0, 0.9)");
         rect(0, 0, windowWidth, 800);
 
