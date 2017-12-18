@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+   	<title>Merry Christmas</title>
+  <!-- <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  	<link rel="stylesheet" media="screen" href="css/style.css">
+  	<link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+</head>
+<body>
+	<!-- particles.js container -->
+	<div id="particles-js" class="snow"></div>
+	<!-- background picture -->
+	<div id="background">
+		<img src="assets/background_3.png" style="width: 100%">
+	</div>
+	<div class="main">
+		<h1 class="title">Merry Christmas</h1>
+		<div id="box1">
+			<img src="assets/bottle_1.png" style="width: 25%">
+			<img src="assets/santa.gif" style="width: 50%">
+			<img src="assets/bottle_2.png" style="width: 14%; margin-bottom: 25vh">
+		</div>
+		<div id="box2">
+			<p>Oh!!!<br>Santa Claus is drunk, how about the gifts?</p>
+			<button class="button" onclick="window.location.href='game.html'" onclick="start()"><img src="assets/button.png" style="width: 45%"></button>
+		</div>
+	</div>
+	<div id="music">
+        <audio autoplay>
+            <source src="assets/snoring.wav" type="audio/mpeg">
+        </audio>
+    </div>
+    <audio id="bottle" src="assets/bottle.mp3"></audio>
+	<script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		function start() {
+        	document.getElementById('bottle').play();
+        }
+	</script>
+</body>
+</html>
