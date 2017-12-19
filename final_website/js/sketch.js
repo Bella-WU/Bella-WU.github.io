@@ -64,9 +64,9 @@ function setup() {
     lanes.push(new Lane(6, grid, "#995c0d", "LOG", 3, 2, 250, -1.7));
     lanes.push(new Safety(7, grid));
     lanes.push(new Lane(8, grid, "#e54291", "CAR", 2, 3, 350, -1.4));
-    lanes.push(new Lane(9, grid, "#48ba48", "CAR", 3, 1, 150, 2.4));
+    lanes.push(new Lane(9, grid, "#48ba48", "CAR", 4, 1, 150, 2.4));
     lanes.push(new Lane(10, grid, "#4787ff", "CAR", 2, 2, 150, -3.6));
-    lanes.push(new Lane(11, grid, "#fcaf2a", "CAR", 2, 3, 250, 2.3));
+    lanes.push(new Lane(11, grid, "#fcaf2a", "CAR", 3, 3, 250, 2.3));
     lanes.push(new Lane(12, grid, "#e22222", "CAR", 1, 4, 550, -3.5));
     lanes.push(new Safety(13, grid));
     lanes.push(new Safety(14, grid));
