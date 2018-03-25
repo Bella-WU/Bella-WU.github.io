@@ -1,5 +1,5 @@
 #clear {
-	clear: both;
+  clear: both;
 }
 
 body {
@@ -13,9 +13,24 @@ body {
 
 h1 {
   font-family: 'Nanum Myeongjo', serif;
-
   text-align: center;
   font-size: 65px;
+
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 p {
