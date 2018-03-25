@@ -1,0 +1,42 @@
+#clear {
+	clear: both;
+}
+
+body {
+  background-image: url("images/background.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+  font-family: 'Nanum Myeongjo', serif;
+
+  text-align: center;
+  font-size: 65px;
+}
+
+p {
+  font-family: 'Nanum Myeongjo', serif;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 10vh;
+}
+
+#box {
+  float: left;
+}
+
+.button {
+  margin-left: 20vw;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+
+.text {
+  margin-left: 10vw;
+  font-size: 30px;
+}
