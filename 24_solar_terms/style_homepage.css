@@ -1,0 +1,179 @@
+body {
+	/*font-family: 'Josefin Sans', sans-serif;*/
+	font-family: 'Philosopher', sans-serif;
+    background-image: url("images/background.png");
+}
+
+#header {
+    /*background-color: green;*/
+    font-size: 22px;
+    color: rgb(71, 71, 71);
+    text-align: center;
+    padding-top: 20px;
+
+    animation-name: fadeInUp;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#intro {
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    padding-left: 25vw;
+    padding-right: 25vw;
+    margin-bottom: 4vw;
+}
+
+#group {
+    /*background-color: red;*/
+    text-align: center;
+}
+
+.dropbtn {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 16px 40px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 100px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /*background-color: #f9f9f9;*/
+    min-width: 120px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    /*background-color: #3e8e41;*/
+}
+/*Dropdown*/
+
+
+
+
+
+.tablink {
+    background-color: rgb(102, 102, 102);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-family: 'Philosopher', sans-serif;
+    width: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+    background-color: rgb(181, 181, 181);
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 180px;
+    text-align: center;
+
+}
+
+/* Style each tab content individually */ 
+#London {
+    /*background-color:red;*/
+    background-image: url("images/spring.jpg");
+}
+#Paris {
+    /*background-color:green;*/
+    background-image: url("images/summer.jpg");
+}
+#Tokyo {
+    /*background-color:blue;*/
+    background-image: url("images/autumn.jpg");
+}
+#Oslo {
+    /*background-color:orange;*/
+    background-image: url("images/winter.jpg");
+}
+/*Banner*/
+
+
+
+
+
+#footer {
+    margin-top: 10vw;
+    padding: 15px;
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    color: rgb(229, 229, 229);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
